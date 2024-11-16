@@ -30,14 +30,15 @@ main {
     max-width: 840px;
 }
 
-aside { 
-    width: 150px;       
-    margin: 1px;
-    border: 1px solid black;
-    padding: 2px;
-    background-color: darkblue;
-    color: gray;
-    }
+aside {
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* 1️⃣ */
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+  }
 
 aside img {
     width: 200px;
