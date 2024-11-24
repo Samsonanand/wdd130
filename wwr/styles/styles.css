@@ -79,13 +79,14 @@ nav a:hover {
 
 .hero h1 {
     position: absolute; /* Absolute positioning for overlap */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 20px;
+    align-items: center;
     transform: translate(-50%, -50%); /* Exact centering using transform */
     color: var(--heading-text-color);
     font-size: 3rem;
     font-family: var(--heading-font), sans-serif;
     font-weight: bold;
+    background: radial-gradient(#00171F, Semi-transparent);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     z-index: 2; /* Ensure the title stays on top of the image */
 }
@@ -102,7 +103,7 @@ article {
     gap: 20px; /* Space between the image and the text */
     z-index: 2; /* Ensure it stays above the hero image */
     
-    bottom: 25px; /* added this as per lesson */
+    
     left: 15px; /* added this as per lesson */
 	background: radial-gradient(#eee, #11aa11);
 	border: 1px solid #000;
@@ -114,7 +115,7 @@ article {
 article img {
     width: 200px; /* Set a specific width for the image */
     height: auto;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 
 article h2 {
