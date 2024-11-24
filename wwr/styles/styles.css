@@ -94,7 +94,7 @@ nav a:hover {
 }
 
 /* Article styling */
-.hero article {
+.article {
     display: flex; /* Use flexbox for layout inside the article */
     align-items: flex-start;
     justify-content: space-between; /* Separate image and text */
@@ -107,16 +107,10 @@ nav a:hover {
     gap: 20px;
 }
 
-/* Article image: Passport size, aligned right */
-.hero article img {
-    width: 150px; /* Passport size */
-    height: auto;
-    object-fit: cover;
-    align-self: flex-start;
-}
+
 
 /* Article H2: Above the paragraph, left side */
-.hero article h2 {
+.article h2 {
     font-size: 1.5rem;
     color: var(--heading-text-color);
     font-family: var(--heading-font), sans-serif;
@@ -125,7 +119,7 @@ nav a:hover {
 }
 
 /* Article paragraph: Below H2 */
-.hero article p {
+.article p {
     font-size: 1rem;
     color: var(--heading-text-color);
     font-family: var(--text-font), sans-serif;
@@ -137,6 +131,15 @@ nav a:hover {
 section {
     margin: 50px auto;
     padding: 20px 200px; /* Maintain hero margins */
+}
+
+/* Article image: Passport size, aligned right */
+.article img {
+    width: 200px; /* Passport size */
+    height: auto;
+    object-fit: cover;
+    align-self: flex-start;
+    float: Right;
 }
 
 section div {
