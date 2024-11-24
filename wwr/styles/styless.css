@@ -16,22 +16,19 @@ body {
 }
 
 header nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; /* Aligns logo and links horizontally */
+    align-items: center; /* Centers the logo vertically */
     background-color: darkblue;
     padding: 10px;
 }
 
-header nav .logo {
-    width: 50px;
-    height: auto;
+header nav a.logo {
+    margin-right: auto; /* Pushes navigation links to the right */
 }
 
-header nav a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
+header nav a.logo img {
+    width: 100px; /* Increases the size of the logo */
+    height: auto;
 }
 
 .hero {
@@ -62,15 +59,33 @@ header nav a {
 
 .hero article {
     position: absolute;
-    bottom: 10%; /* Positions it within the hero section */
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%; /* Adjusts the width */
+    width: 70%;
     background: rgba(0, 126, 167, 0.8); /* Semi-transparent strip */
     padding: 1rem;
     box-shadow: 0 0 20px #000;
-    text-align: center;
     border-radius: 8px;
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center content vertically */
+    gap: 1rem; /* Space between image and text */
+}
+
+.hero article img {
+    flex-shrink: 0; /* Prevents the image from resizing */
+    width: 150px; /* Fixed size for image */
+    height: auto;
+    border: 2px solid var(--heading-background-color); /* Border for better visibility */
+    border-radius: 8px;
+    box-shadow: 0 0 10px gray;
+    float: right; /* Float to the right of the article */
+}
+
+.hero article p {
+    flex-grow: 1; /* Allows the paragraph to fill the remaining space */
+    margin: 0;
+    text-align: left; /* Aligns text to the left */
 }
 
 
