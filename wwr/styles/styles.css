@@ -68,7 +68,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-top: 50px; /* Space between the logo and hero image (100px) */
+    margin-top: 10px; /* Space between the logo and hero image (100px) */
     padding: 0 200px; /* Adds 200px margin to left and right of hero image */
 }
 
