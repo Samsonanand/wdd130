@@ -4,170 +4,189 @@
     --accent1-color: #00A8E8;
     --accent2-color: #00171F;
     --heading-text-color: #FFFFFF;
-    --heading-font: 'Montserrat', sans-serif;
-    --text-font: 'Roboto', sans-serif;
+    --heading-font: 'Montserrat';
+    --text-font: 'Roboto';
     --padding: 1rem;
     --border: 1px solid rgb(0 0 0 / 0.1);
 }
 
-body {
+/* Reset some default margins and paddings */
+* {
     margin: 0;
     padding: 0;
-    font-family: var(--text-font);
+    box-sizing: border-box;
+}
+
+/* Style the header */
+header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Full-screen height */
-    background-color: #f4f4f4;
-}
-
-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: var(--padding);
-    background-color: var(--accent2-color);
-    color: white;
+    position: relative; /* Ensure positioning context for logo */
 }
 
-header .logo img {
-    max-height: 60px;
+/* Logo styling */
+.logo {
+    position: absolute;
+    top: 20px; /* Adjust the top margin as needed */
+    left: 200px; /* Add some margin from the left */
 }
 
+header img {
+    max-width: 150px; /* Adjust logo size */
+    height: auto;
+}
+
+/* Navigation styling */
 nav {
     display: flex;
-    gap: 10px;
+    justify-content: flex-start; /* Align links to the left */
+    gap: 20px; /* Space between the links */
+    margin-top: 150px; /* Space between the logo and nav links (100px) */
+    margin-bottom: 20px; /* 20px space between nav and hero image */
+    padding: 0 200px;
 }
 
+/* Styling for navigation links */
 nav a {
-    color: white;
     text-decoration: none;
-    padding: 10px;
-    background-color: darkblue;
-    border-radius: 5px;
+    color: var(--accent1-color); /* Use your custom accent color */
+    font-size: 16px;
+    padding: 10px 0;
+    transition: color 0.3s ease;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 840px;
-    text-align: center;
+nav a:hover {
+    color: var(--secondary-background-color); /* Hover color change */
 }
 
+/* Hero section */
 .hero {
-    position: relative; /* Enables positioning of child elements */
-    text-align: center; /* Centers text horizontally */
-    margin: 10px auto;
-    max-width: 100%;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0 200px;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    display: block;
-    border: none;
 }
 
+/* H1 Styling: Centered on top of the hero image */
 .hero h1 {
     position: absolute;
-    top: 20px; /* Add some space from the top */
+    top: 5%; /* Positioning in the middle top section */
     left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 52, 89, 0.8); /* Semi-transparent background */
+    transform: translate(-50%, 0);
     color: var(--heading-text-color);
-    font-family: var(--heading-font);
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    text-align: center;
-    max-width: 90%; /* Avoid touching the borders */
-}
-
-.hero article {
-    position: absolute;
-    top: 120px; /* Below the H1 */
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: row; /* Side-by-side layout for image and text */
-    align-items: center;
-    background: rgba(238, 238, 238, 0.9); /* Light background for readability */
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 80%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.hero article img {
-    flex: 1;
-    max-width: 150px; /* Adjust as needed */
-    height: auto;
-    margin-left: 10px;
-    border: 1px solid #00171F;
-    padding: 5px;
-    box-shadow: 0 0 10px gray;
-}
-
-.hero article p {
-    flex: 3;
-    margin: 0;
-    padding-left: 10px;
-    text-align: left;
-    font-family: var(--text-font);
-    color: #333;
-}
-
-
-h1 {
-    background-color: var(--heading-background-color);
-    color: var(--heading-text-color);
-    font-family: var(--heading-font);
-    padding: var(--padding);
-    text-align: center;
-    margin: var(--padding) 0;
-}
-
-h2 {
-    background-color: var(--secondary-background-color);
-    color: var(--heading-text-color);
-    font-family: var(--text-font);
-    padding: var(--padding);
-    margin-top: var(--padding);
-    text-align: center;
-}
-
-article {
-    background: radial-gradient(#eee, #007EA7);
-    border: 1px solid #000;
+    font-size: 3rem;
+    font-family: var(--heading-font), sans-serif;
+    font-weight: bold;
+    background: radial-gradient(#00171F, transparent);
     padding: 0.65rem;
     box-shadow: 0 0 30px #111;
     opacity: 0.9;
-    max-width: 600px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    z-index: 2;
 }
 
-section img {
-    margin: 10px;
+/* Article styling inside hero */
+article {
+    position: absolute;
+    bottom: 10%; /* Adjusted for better alignment with hero */
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: radial-gradient(#007EA7, transparent);
+    border: 1px solid #000;
+    box-shadow: 0 0 30px #111;
+    opacity: 0.9;
+    gap: 20px;
+    padding: 10px;
+    width: 60%; /* Centered within hero */
+}
+
+/* Floated article image */
+article img {
     width: 150px;
     height: auto;
-    border: 1px solid #00171F;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
+    object-fit: cover;
+    float: right; /* Float image to the right */
+    margin-left: 10px; /* Add spacing from the text */
+}
+
+/* Article content */
+article div {
+    text-align: left;
+}
+
+article h2 {
+    font-size: 1.5rem;
+    color: var(--heading-text-color);
+    font-family: var(--heading-font), sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+article p {
+    font-size: 1rem;
+    color: var(--heading-text-color);
+    font-family: var(--text-font), sans-serif;
+    line-height: 1.5;
+}
+
+/* Section for history and additional images */
+/* Section for history and additional images */
+section h2 {
+    font-size: 2rem;
+    color: var(--accent2-color);
+    font-family: var(--heading-font), sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: var(--accent1-color);
+    font-family: var(--text-font), sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Images Section */
+section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section div img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+section div span {
+    font-size: 1rem;
+    color: var(--secondary-background-color);
+    font-family: var(--text-font), sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
 footer {
-    margin-top: 20px;
-    border-top: 1px solid #00171F;
-    text-align: center;
-    padding: var(--padding);
-    background-color: var(--accent2-color);
-    color: white;
-    width: 100%;
-}
-
-footer nav a img {
-    width: 24px;
-    height: 24px;
-    margin: 0 5px;
+	bottom: 0;
+	margin: 1rem;
+	border-top: 1px solid #000;
+	padding: 0 200px; /* Adds 200px margin to left and right of hero image */
+	color: navy;
+	font-weight: 700;
+	font-style: italic;
 }
