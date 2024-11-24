@@ -68,7 +68,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-top: 10px; /* Space between the logo and hero image (100px) */
+    margin-top: 5px; /* Space between the logo and hero image (100px) */
     padding: 0 200px; /* Adds 200px margin to left and right of hero image */
 }
 
@@ -78,13 +78,14 @@ nav a:hover {
 }
 
 .hero h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; /* Absolute positioning for overlap */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Exact centering using transform */
     color: var(--heading-text-color);
     font-size: 3rem;
     font-family: var(--heading-font), sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    z-index: 2; /* Ensure the title stays on top of the image */
 }
