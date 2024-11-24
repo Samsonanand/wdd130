@@ -177,3 +177,14 @@ section div span {
     font-weight: bold;
     text-align: center;
 }
+
+footer {
+	position: fixed;
+	bottom: 0;
+	margin: 1rem;
+	border-top: 1px solid #000;
+	padding: 0 200px; /* Adds 200px margin to left and right of hero image */
+	color: navy;
+	font-weight: 700;
+	font-style: italic;
+}
