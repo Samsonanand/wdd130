@@ -101,6 +101,14 @@ article {
     justify-content: flex-start; /* Align items to the left */
     gap: 20px; /* Space between the image and the text */
     z-index: 2; /* Ensure it stays above the hero image */
+    
+    bottom: 25px; /* added this as per lesson */
+    left: 15px; /* added this as per lesson */
+	background: radial-gradient(#eee, #11aa11);
+	border: 1px solid #000;
+	padding: 0.65rem;
+	box-shadow: 0 0 30px #111;
+	opacity: 0.9;
 }
 
 article img {
