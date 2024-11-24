@@ -78,7 +78,7 @@ nav a:hover {
 /* H1 Styling: Centered at the top of the hero image */
 .hero h1 {
     position: absolute;
-    top: 10%; /* Move to the middle top section */
+    top: 5%; /* Move to the middle top section */
     left: 50%;
     transform: translate(-50%, 0); /* Center horizontally */
     color: var(--heading-text-color);
@@ -89,7 +89,7 @@ nav a:hover {
     padding: 0.65rem;
     box-shadow: 0 0 30px #111;
     opacity: 0.9;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
     z-index: 2; /* Ensure the title stays on top of the image */
 }
 
