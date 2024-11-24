@@ -1,108 +1,123 @@
 :root {
-    --main-bg-color: #003459;
-    --secondary-bg-color: #007EA7;
-    --accent-color: #00A8E8;
-    --text-color-light: #FFFFFF;
-    --text-color-dark: #00171F;
-    --font-heading: 'Merriweather', serif;
-    --font-body: 'Roboto', sans-serif;
+    --heading-background-color: #003459;
+    --secondary-background-color: #007EA7;
+    --accent1-color: #00A8E8;
+    --accent2-color: #00171F;
+    --heading-text-color: #FFFFFF;
+    --heading-font: 'Montserrat', sans-serif;
+    --text-font: 'Roboto', sans-serif;
     --padding: 1rem;
-    --border-radius: 10px;
+    --border: 1px solid rgb(0 0 0 / 0.1);
 }
 
-/* General Reset */
 body {
     margin: 0;
-    font-family: var(--font-body);
-    color: var(--text-color-dark);
+    padding: 0;
+    font-family: var(--text-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full-screen height */
+    background-color: #f4f4f4;
 }
 
-/* Header */
 header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--main-bg-color);
     padding: var(--padding);
+    background-color: var(--accent2-color);
+    color: white;
 }
 
 header .logo img {
-    width: 150px;
-    height: auto;
+    max-height: 60px;
 }
 
-header nav a {
-    color: var(--text-color-light);
-    text-decoration: none;
-    margin: 0 var(--padding);
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-    position: relative;
-    background-image: url('../images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
+nav {
     display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: darkblue;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    max-width: 840px;
     text-align: center;
 }
 
-.hero h1 {
-    position: absolute;
-    color: var(--text-color-light);
-    background: rgba(0, 0, 0, 0.5);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
-    font-family: var(--font-heading);
-    font-size: 2rem;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 10%;
-    left: 10%;
-    background: rgba(255, 255, 255, 0.8);
-    padding: var(--padding);
-    border-radius: var(--border-radius);
+.hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
 }
 
-.hero article img {
-    width: 100px;
+.hero img {
+    width: 100%;
+    max-width: 600px;
     height: auto;
-    border-radius: 50%;
+    margin-bottom: var(--padding);
 }
 
-/* Sections */
-section {
+h1 {
+    background-color: var(--heading-background-color);
+    color: var(--heading-text-color);
+    font-family: var(--heading-font);
     padding: var(--padding);
-    max-width: 1100px;
-    margin: 0 auto;
+    text-align: center;
+    margin: var(--padding) 0;
+}
+
+h2 {
+    background-color: var(--secondary-background-color);
+    color: var(--heading-text-color);
+    font-family: var(--text-font);
+    padding: var(--padding);
+    margin-top: var(--padding);
+    text-align: center;
+}
+
+article {
+    background: radial-gradient(#eee, #007EA7);
+    border: 1px solid #000;
+    padding: 0.65rem;
+    box-shadow: 0 0 30px #111;
+    opacity: 0.9;
+    max-width: 600px;
 }
 
 section img {
+    margin: 10px;
     width: 150px;
     height: auto;
-    margin: var(--padding) 0;
-    border-radius: var(--border-radius);
+    border: 1px solid #00171F;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
 }
 
-/* Footer */
 footer {
-    background-color: var(--main-bg-color);
-    color: var(--text-color-light);
+    margin-top: 20px;
+    border-top: 1px solid #00171F;
     text-align: center;
     padding: var(--padding);
+    background-color: var(--accent2-color);
+    color: white;
+    width: 100%;
 }
 
-footer nav img {
-    width: 30px;
-    margin: 0 0.5rem;
-    text-decoration: none;
+footer nav a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
 }
