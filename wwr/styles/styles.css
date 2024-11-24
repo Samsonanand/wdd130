@@ -70,9 +70,12 @@ nav a:hover {
     padding: 0 200px; /* Adds 200px margin to left and right of hero image */
 }
 
-.hero img {
+.hero {
+    position: relative; /* Make this container the positioning context */
     width: 100%;
-    height: auto;
+    text-align: center;
+    margin-top: 5px;
+    padding: 0 200px;
 }
 
 /* H1 Styling: Centered at the top of the hero image */
@@ -95,19 +98,22 @@ nav a:hover {
 
 /* Article styling */
 .article {
-    position: absolute;
-    display: flex; /* Use flexbox for layout inside the article */
-    align-items: flex-start;
-    justify-content: space-between; /* Separate image and text */
-    margin: 50px auto;
-    padding: 20px 200px; /* Maintain hero margins */
-    background: radial-gradient(#007EA7, transparent);
-    border: 1px solid #000;
-    box-shadow: 0 0 30px #111;
-    opacity: 0.9;
-    gap: 20px;
+    position: absolute; /* Overlay on top of the hero image */
+    top: 50%; /* Adjust as needed to position the article */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the article */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; /* Adjust as needed */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Ensure it's above the hero image */
+    border-radius: 10px; /* Optional: add rounded corners */
 }
-
 
 
 /* Article H2: Above the paragraph, left side */
