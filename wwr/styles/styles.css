@@ -133,6 +133,7 @@ article p {
 }
 
 /* Section for history and additional images */
+/* Section for history and additional images */
 section {
     margin: 50px auto;
     padding: 20px 200px; /* Maintain hero margins */
@@ -141,7 +142,7 @@ section {
 section div {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center align the content */
     margin-bottom: 20px;
 }
 
@@ -157,10 +158,22 @@ section div h3 {
     color: var(--accent2-color);
     font-family: var(--heading-font), sans-serif;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 section div p {
     font-size: 1rem;
     color: var(--accent1-color);
     font-family: var(--text-font), sans-serif;
+    text-align: center;
+}
+
+/* Name for each image */
+section div span {
+    font-size: 1rem;
+    color: var(--secondary-background-color);
+    font-family: var(--text-font), sans-serif;
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
 }
