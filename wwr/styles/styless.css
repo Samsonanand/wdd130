@@ -1,0 +1,95 @@
+:root {
+    --heading-background-color: #003459;
+    --secondary-background-color: #007EA7;
+    --accent1-color: #00A8E8;
+    --accent2-color: #00171F;
+    --heading-text-color: #FFFFFF;
+    --heading-font: 'Montserrat', sans-serif;
+    --text-font: 'Roboto', sans-serif;
+    --padding: 1rem;
+    --border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: var(--text-font);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkblue;
+    padding: 10px;
+}
+
+header nav .logo {
+    width: 50px;
+    height: auto;
+}
+
+header nav a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%; /* Stretches the image from left to right */
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    background-color: var(--heading-background-color);
+    color: var(--heading-text-color);
+    font-family: var(--heading-font);
+    padding: var(--padding);
+    text-align: center;
+    opacity: 0.9;
+}
+
+article {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    background: rgba(0, 126, 167, 0.8); /* Transparent strip */
+    padding: 1rem;
+    box-shadow: 0 0 30px #111;
+    text-align: center;
+}
+
+section figure {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}
+
+section figure img {
+    width: 150px;
+    height: auto;
+    border: var(--border);
+    box-shadow: 0 0 10px gray;
+}
+
+section figure figcaption {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 20px;
+    border-top: var(--border);
+    text-align: center;
+    padding: 10px;
+}
