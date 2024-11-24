@@ -60,13 +60,13 @@ nav a:hover {
     color: var(--secondary-background-color); /* Hover color change */
 }
 
-/* Hero section styling with margins */
+/* Hero section styling with updated margins */
 .hero {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-top: 20px; /* Space between nav and hero image */
-    padding: 0 20px; /* Adds margin to left and right of hero image */
+    margin-top: 50px; /* Space between the nav and hero image */
+    padding: 0 200px; /* Adds 200px margin to left and right of hero image */
 }
 
 .hero img {
