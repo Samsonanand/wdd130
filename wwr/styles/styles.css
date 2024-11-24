@@ -94,7 +94,7 @@ nav a:hover {
 }
 
 /* Article styling */
-article {
+.hero article {
     display: flex; /* Use flexbox for layout inside the article */
     align-items: flex-start;
     justify-content: space-between; /* Separate image and text */
@@ -108,7 +108,7 @@ article {
 }
 
 /* Article image: Passport size, aligned right */
-article img {
+.hero article img {
     width: 150px; /* Passport size */
     height: auto;
     object-fit: cover;
@@ -116,7 +116,7 @@ article img {
 }
 
 /* Article H2: Above the paragraph, left side */
-article h2 {
+.hero article h2 {
     font-size: 1.5rem;
     color: var(--heading-text-color);
     font-family: var(--heading-font), sans-serif;
@@ -125,7 +125,7 @@ article h2 {
 }
 
 /* Article paragraph: Below H2 */
-article p {
+.hero article p {
     font-size: 1rem;
     color: var(--heading-text-color);
     font-family: var(--text-font), sans-serif;
