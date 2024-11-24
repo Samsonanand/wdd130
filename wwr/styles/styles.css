@@ -113,9 +113,10 @@ article {
 }
 
 article img {
-    width: 50px; /* Set a specific width for the image */
+    width: 5px; /* Set a specific width for the image */
     height: auto;
     object-fit: fill;
+    align-items: center, right;
 }
 
 article h2 {
@@ -123,5 +124,13 @@ article h2 {
     color: var(--heading-text-color);
     font-family: var(--heading-font), sans-serif;
     font-weight: bold;
+    text-align: Top;
+}
+
+article p {
+    font-size: 2rem;
+    color: var(--heading-text-color);
+    font-family: var(--heading-font), sans-serif;
+    font: var(--text-font);
     text-align: left;
 }
