@@ -95,6 +95,7 @@ nav a:hover {
 
 /* Article styling */
 .article {
+    position: absolute;
     display: flex; /* Use flexbox for layout inside the article */
     align-items: flex-start;
     justify-content: space-between; /* Separate image and text */
