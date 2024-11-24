@@ -58,17 +58,67 @@ main {
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative; /* Enables positioning of child elements */
+    text-align: center; /* Centers text horizontally */
+    margin: 10px auto;
+    max-width: 100%;
 }
 
 .hero img {
     width: 100%;
-    max-width: 600px;
     height: auto;
-    margin-bottom: var(--padding);
+    display: block;
+    border: none;
 }
+
+.hero h1 {
+    position: absolute;
+    top: 20px; /* Add some space from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 52, 89, 0.8); /* Semi-transparent background */
+    color: var(--heading-text-color);
+    font-family: var(--heading-font);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-align: center;
+    max-width: 90%; /* Avoid touching the borders */
+}
+
+.hero article {
+    position: absolute;
+    top: 120px; /* Below the H1 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: row; /* Side-by-side layout for image and text */
+    align-items: center;
+    background: rgba(238, 238, 238, 0.9); /* Light background for readability */
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 80%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero article img {
+    flex: 1;
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    margin-left: 10px;
+    border: 1px solid #00171F;
+    padding: 5px;
+    box-shadow: 0 0 10px gray;
+}
+
+.hero article p {
+    flex: 3;
+    margin: 0;
+    padding-left: 10px;
+    text-align: left;
+    font-family: var(--text-font);
+    color: #333;
+}
+
 
 h1 {
     background-color: var(--heading-background-color);
