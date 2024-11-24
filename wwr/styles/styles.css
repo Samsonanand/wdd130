@@ -130,6 +130,7 @@ nav a:hover {
     color: var(--heading-text-color);
     font-family: var(--text-font), sans-serif;
     line-height: 1.5;
+    float: Right;
 }
 
 /* Section for history and additional images */
@@ -145,7 +146,7 @@ section {
     height: auto;
     object-fit: cover;
     align-self: flex-start;
-    float: Right;
+    float: Left;
 }
 
 section div {
