@@ -45,8 +45,9 @@ nav {
     display: flex;
     justify-content: flex-start; /* Align links to the left */
     gap: 20px; /* Space between the links */
-    margin-top: 100px; /* Space between the logo and nav links (100px) */
+    margin-top: 200px; /* Space between the logo and nav links (100px) */
     margin-bottom: 20px; /* 20px space between nav and hero image */
+    padding: 0 200px;
 }
 
 /* Styling for navigation links */
