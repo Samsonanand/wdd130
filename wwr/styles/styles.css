@@ -10,86 +10,14 @@
     --border: 1px solid rgb(0 0 0 / 0.1);
   }
 
-nav a {
-    color: white;
-    display: block;
-    padding: 20px;
-}
-
-.hero {
-	margin: 10px auto;
-	position: absolute;
-}
-
-.hero img {
-    display: block;
-	width: 100%;
-	height: auto;
-    object-fit: cover;
-}  
-
-
-h1 {
+/* Add this to your styles.css */
+.logo {
     position: absolute;
-    background-color: var(--heading-background-color);
-    color: var(--heading-text-color);
-    font-family: var(--heading-font);
-    padding: var(--padding);
-  }
-
-h2 {
-    background-color: var(--secondary-background-color);
-    color: var(--heading-text-color);
-    font-family: var(--text-font);
-    padding: var(--padding);
+    top: 20px; /* Adjust the top margin as needed */
+    left: 20px; /* Add some margin from the left */
 }
 
-article {
-    position: absolute;
-    background: radial-gradient(#eee, #007EA7);
-	border: 1px solid #000;
-	padding: 0.65rem;
-	box-shadow: 0 0 30px #111;
-	opacity: 0.9;
-}
-
-/* The following CSS selector (rule) removes underlines from all hyperlinks. Do not do this.*/
-/* a  {  
-    text-decoration: none; 
-  } */
-
-
-
-
-  
-
-  
-
-  
-img {
-    width: 150px;
+header img {
+    max-width: 100%; /* Ensures the logo image scales as needed */
     height: auto;
-    border: 1px solid #00171F;
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-    }
-
-p {
-    padding: 0;
 }
-
-main {
-    max-width: 840px;
-}
-
-
-main img {
-    width: 150px;
-    height: auto;
-    }
-
-footer {
-    margin-top: 20px;
-    border-top: 1px solid #00171F;
-    text-align: center;
-    }
