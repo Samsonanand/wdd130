@@ -133,13 +133,6 @@ nav a:hover {
     float: Left;
 }
 
-/* Section for history and additional images */
-/* Section for history and additional images */
-section {
-    margin: 50px auto;
-    padding: 20px 200px; /* Maintain hero margins */
-}
-
 /* Article image: Passport size, aligned right */
 .article img {
     width: 200px; /* Passport size */
@@ -148,6 +141,14 @@ section {
     align-self: flex-start;
     float: right;
 }
+
+/* Section for history and additional images */
+/* Section for history and additional images */
+section {
+    margin: 50px auto;
+    padding: 20px 200px; /* Maintain hero margins */
+}
+
 
 section div {
     display: flex;
