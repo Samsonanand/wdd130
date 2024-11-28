@@ -134,12 +134,19 @@ nav a:hover {
 }
 
 /* Article image: Passport size, aligned right */
-.article img {
+/* .article img {
     width: 200px; /* Passport size */
-    height: auto;
+    /* height: auto;
     object-fit: cover;
     align-self: flex-start;
     float: right;
+} */ 
+
+.article img {
+	float: right;
+	margin: 0 0 15px 15px;
+	border: 1px solid rgba(0 0 0 / .3);
+	box-shadow: 0 0 30px #777;
 }
 
 /* Section for history and additional images */
