@@ -1,0 +1,106 @@
+:root {
+    --heading-background-color: #003459;
+    --secondary-background-color: #007EA7;
+    --accent1-color: #00A8E8;
+    --accent2-color: #00171F;
+    --heading-text-color: #FFFFFF;
+    --heading-font: 'Montserrat';
+    --text-font: 'Roboto';
+    --padding: 1rem;
+    --border: 1px solid rgb(0 0 0 / 0.1);
+}
+
+header {
+	margin: 1rem auto;
+	display: grid;
+	grid-template-columns: 120px 1fr 2fr;
+	align-items: center;
+	border-bottom: 1px solid #ccc;
+	max-width: 1000px;
+}
+
+.logo img {
+	margin: 0 0.25rem 0 1rem;
+	width: 64px;
+	height: auto;
+}
+
+
+
+nav {
+	text-align: right;
+}
+
+.navigation {
+	display: flex;
+	list-style: none;
+}
+
+.navigation li {
+	flex: 1 1 100%;
+}
+
+.navigation a {
+	display: block;
+	color: navy;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	color: tomato;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+
+
+copied from rafting.css
+
+/* Section for history and additional images */
+/* Section for history and additional images */
+
+
+section {
+    display: grid;
+    margin: 50px auto;
+    padding: 20px 200px; /* Maintain hero margins */
+}
+
+
+section div {
+    display: grid;
+    margin-bottom: 20px;
+}
+
+section div img {
+    width: 100%;
+    max-width: 600px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px; /* Add space below the image */
+}
+
+section div h3 {
+    font-size: 1.5rem;
+    color: var(--accent2-color);
+    font-family: var(--heading-font), sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section div p {
+    font-size: 1rem;
+    color: var(--accent1-color);
+    font-family: var(--text-font), sans-serif;
+    text-align: center;
+}
+
+/* Name for each image */
+section div span {
+    font-size: 1rem;
+    color: var(--secondary-background-color);
+    font-family: var(--text-font), sans-serif;
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+}
