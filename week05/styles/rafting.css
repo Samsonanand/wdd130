@@ -249,10 +249,10 @@ figcaption {
 }
 
 .company-info iframe {
-    width: 100%;
-    max-width: 600px; /* Ensures the map fits inside the box */
-    height: 400px; /* Set the height of the map */
-    border-radius: 8px; /* Rounded corners for the iframe */
+    width: 100%; /* Make the iframe take up the full width of its container */
+    height: 400px; /* Set the height of the iframe */
+    border: 1px solid #ccc; /* Add a light border around the iframe */
+    border-radius: 8px; /* Round the corners of the iframe */
 }
 
 /* Centering the H1 */
