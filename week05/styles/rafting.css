@@ -1,0 +1,422 @@
+/* Root Variables */
+:root {
+    --primary-color: #003459;
+    --secondary-color: #007EA7;
+    --text-color: #00171F;
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: 'Roboto', sans-serif;
+    --padding: 1rem;
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding);
+}
+
+
+header {
+    margin: 0 auto; /* Center the header */
+    display: grid;
+    grid-template-columns: 120px 1fr 2fr;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    max-width: 1200px; /* Match the width of the Hero and History sections */
+    background-color: var(--primary-color);
+    padding: var(--padding); /* Ensure padding is consistent */
+}
+
+
+.logo {
+    height: 150px;
+    right:25px;
+}
+
+nav {
+    text-align: right;
+    grid-column: 3; /* Place the nav in the last column */
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    gap: var(--padding);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #4bc6ef;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.navigation li {
+	flex: 1 1 100%;
+}
+
+.navigation a:hover {
+	color: #ccc;
+	font-weight: 1000;
+	text-decoration: underline;
+}
+
+section {
+    width: 100%; /* Ensure sections take the full width of the page */
+    padding: 2rem 0; /* Add some padding for better visual spacing */
+}
+
+/* Hero Section */
+/* Hero Section */
+.hero {
+    text-align: center;
+    position: relative;
+    height: 600px; /* Set the height of the hero image */
+    margin-bottom: 1rem;
+}
+
+
+.hero h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it stretches across the entire width */
+    transform: translateX(0); /* Remove the previous centering */
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    background-color: rgba(13, 88, 112, 0.5); /* 50% opacity */
+    margin-bottom: 1rem;
+    color: #fcfcfc;
+}
+
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+}
+
+/* Banner Section */
+.banner {
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 23, 31, 0.5); /* 50% opacity */
+    padding: var(--padding);
+    margin-top: 1rem;
+}
+
+
+.banner-text {
+    color: #fcfcfc;
+    flex: 3;
+    text-align: left;
+}
+
+.banner-image {
+    flex: 1;
+    text-align: right;
+}
+
+.banner-image img {
+    width: auto;
+    height: 150px;
+}
+
+/* History Section */
+.history {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Keeps the image in the center column */
+    gap: var(--padding);
+    align-items: center;
+    justify-items: center; /* Centers the content within each grid cell */
+}
+
+.history-content img {
+    max-width: 80%; /* Ensure the image doesn't stretch beyond its bounds */
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+/* Adventure Section */
+.adventure {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts the number of columns based on screen size */
+    gap: 20px; /* Space between grid items */
+    grid-auto-rows: minmax(200px, auto); /* Ensures rows are a minimum of 200px high */
+}
+
+.adventure-grid div {
+    text-align: center;
+}
+
+.adventure-grid img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.adventure h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+figure {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the space without distortion */
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Contact Us Page Specific Updates */
+
+/* Center and Box Style for "Our Contact Information" */
+
+/* Company Info Box Styling */
+.company-info {
+    max-width: 800px;
+    margin: 2rem auto; /* Center the box */
+    padding: 2rem;
+    background-color: #f4f4f4; /* Light background for the box */
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text inside */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.company-info h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Uses the primary color for the heading */
+    margin-bottom: 1rem;
+}
+
+.company-info p {
+    font-size: 1rem;
+    color: var(--text-color); /* Uses the text color defined in the root variables */
+    margin: 0.5rem 0; /* Adds some space between paragraphs */
+}
+
+.company-info .map {
+    margin-top: 2rem;
+}
+
+.company-info iframe {
+    width: 100%;
+    max-width: 600px; /* Ensures the map fits inside the box */
+    height: 400px; /* Set the height of the map */
+    border-radius: 8px; /* Rounded corners for the iframe */
+}
+
+/* Centering the H1 */
+main h1 {
+    text-align: center; /* Center the heading */
+    font-size: 2.5rem; /* Make the heading larger */
+    color: var(--primary-color); /* Use the primary color */
+    margin-bottom: 2rem; /* Space below the heading */
+}
+
+main h2 {
+    text-align: center; /* Center the heading */
+    font-size: 1.5rem; /* Make the heading larger */
+    color: var(--primary-color); /* Use the primary color */
+    margin-bottom: 2rem; /* Space below the heading */
+}
+/* Team Section Styling */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the section horizontally */
+    justify-content: center; /* Center the section vertically */
+    text-align: center;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between team members */
+    justify-items: center; /* Center the items inside each grid cell */
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1000px; /* Optional, to limit the width */
+    margin-left: auto; /* Center the grid horizontally */
+    margin-right: auto; /* Center the grid horizontally */
+}
+
+.team-grid figure {
+    width: 200px; /* Fixed width for the images */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items in the figure */
+}
+
+/* Team Images - Square and Centered */
+.team-grid img {
+    width: 100%; /* Make the image responsive */
+    height: 200px; /* Make the images square */
+    object-fit: cover; /* Ensure the images are cropped appropriately */
+    border-radius: 4px; /* Optional: round the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Captions under the image inside a box */
+.team-grid figcaption {
+    margin-top: 1rem; /* Space between image and name */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color); /* Use the text color */
+    background-color: #f2f2f2; /* Background color for the box */
+    padding: 0.5rem; /* Padding inside the caption box */
+    width: 100%; /* Ensure it spans the full width of the figure */
+    text-align: center;
+    border-radius: 4px; /* Rounded corners for the caption box */
+    border: 1px solid #ccc; /* Light border around the caption box */
+}
+
+/* Box Style for "Send Us a Message" Section */
+.contact-form {
+    max-width: 800px;
+    margin: 2rem auto; /* Center the form */
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for the form */
+    border: 1px solid #ccc; /* Add a border around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.2rem;
+    color: var(--text-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px; /* Adjust the height of the textarea */
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--secondary-color);
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between footer text and social links */
+    align-items: center; /* Vertically align items */
+    padding: var(--padding);
+    margin-top: 2rem;
+}
+
+
+footer .footer-text {
+    flex: 1; /* Take up available space for centering */
+    text-align: center; /* Center-align the text */
+    font-size: 1rem; /* Adjust as needed */
+    color: #fcfcfc; /* Ensure readability on the secondary color background */
+}
+
+footer .social-links {
+    display: flex; /* Arrange icons horizontally */
+    gap: 0.5rem; /* Add spacing between icons */
+    justify-content: flex-end; /* Align to the right */
+    align-items: center; /* Ensure proper vertical alignment */
+}
+
+footer .social-links img {
+    width: 25px; /* Adjust size as needed */
+    height: 25px; /* Ensure consistent icon dimensions */
+    cursor: pointer; /* Add hover cursor for interactivity */
+}
+
+footer img {
+    width: 20px;
+    height: 20px;
+}
