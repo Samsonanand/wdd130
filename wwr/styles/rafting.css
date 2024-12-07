@@ -67,6 +67,10 @@ nav {
 	text-decoration: underline;
 }
 
+section {
+    width: 100%; /* Ensure sections take the full width of the page */
+    padding: 2rem 0; /* Add some padding for better visual spacing */
+}
 
 /* Hero Section */
 /* Hero Section */
@@ -209,6 +213,175 @@ figcaption {
     padding: 10px;
     font-size: 1rem;
     font-weight: bold;
+}
+
+/* Contact Us Page Specific Updates */
+
+/* Center and Box Style for "Our Contact Information" */
+
+/* Company Info Box Styling */
+.company-info {
+    max-width: 800px;
+    margin: 2rem auto; /* Center the box */
+    padding: 2rem;
+    background-color: #f4f4f4; /* Light background for the box */
+    border: 1px solid #ccc; /* Border around the box */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text inside */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.company-info h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Uses the primary color for the heading */
+    margin-bottom: 1rem;
+}
+
+.company-info p {
+    font-size: 1rem;
+    color: var(--text-color); /* Uses the text color defined in the root variables */
+    margin: 0.5rem 0; /* Adds some space between paragraphs */
+}
+
+.company-info .map {
+    margin-top: 2rem;
+}
+
+.company-info iframe {
+    width: 100%; /* Make the iframe take up the full width of its container */
+    height: 400px; /* Set the height of the iframe */
+    border: 1px solid #ccc; /* Add a light border around the iframe */
+    border-radius: 8px; /* Round the corners of the iframe */
+}
+
+/* Centering the H1 */
+main h1 {
+    text-align: center; /* Center the heading */
+    font-size: 2.5rem; /* Make the heading larger */
+    color: var(--primary-color); /* Use the primary color */
+    margin-bottom: 2rem; /* Space below the heading */
+}
+
+main h2 {
+    text-align: center; /* Center the heading */
+    font-size: 1.5rem; /* Make the heading larger */
+    color: var(--primary-color); /* Use the primary color */
+    margin-bottom: 2rem; /* Space below the heading */
+}
+/* Team Section Styling */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the section horizontally */
+    justify-content: center; /* Center the section vertically */
+    text-align: center;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+/* Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Space between team members */
+    justify-items: center; /* Center the items inside each grid cell */
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1000px; /* Optional, to limit the width */
+    margin-left: auto; /* Center the grid horizontally */
+    margin-right: auto; /* Center the grid horizontally */
+}
+
+.team-grid figure {
+    width: 200px; /* Fixed width for the images */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the items in the figure */
+}
+
+/* Team Images - Square and Centered */
+.team-grid img {
+    width: 100%; /* Make the image responsive */
+    height: 200px; /* Make the images square */
+    object-fit: cover; /* Ensure the images are cropped appropriately */
+    border-radius: 4px; /* Optional: round the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Captions under the image inside a box */
+.team-grid figcaption {
+    margin-top: 1rem; /* Space between image and name */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-color); /* Use the text color */
+    background-color: #f2f2f2; /* Background color for the box */
+    padding: 0.5rem; /* Padding inside the caption box */
+    width: 100%; /* Ensure it spans the full width of the figure */
+    text-align: center;
+    border-radius: 4px; /* Rounded corners for the caption box */
+    border: 1px solid #ccc; /* Light border around the caption box */
+}
+
+/* Box Style for "Send Us a Message" Section */
+.contact-form {
+    max-width: 800px;
+    margin: 2rem auto; /* Center the form */
+    padding: 2rem;
+    background-color: #f9f9f9; /* Light background for the form */
+    border: 1px solid #ccc; /* Add a border around the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.5rem 0 0.2rem;
+    color: var(--text-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px; /* Adjust the height of the textarea */
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: var(--secondary-color);
 }
 
 /* Footer */
