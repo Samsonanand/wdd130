@@ -138,6 +138,8 @@ section {
     padding: 2rem;
     text-align: center;
     margin: 2rem 0;
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
 }
 
 .history-content {
@@ -159,6 +161,8 @@ section {
     padding: 20px;
     background-color: #fff;
     text-align: center;
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
 }
 
 .adventure-grid {
@@ -220,7 +224,7 @@ figcaption {
 
 /* Company Info Box Styling */
 .company-info {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 2rem auto; /* Center the box */
     padding: 2rem;
     background-color: #f4f4f4; /* Light background for the box */
@@ -228,6 +232,8 @@ figcaption {
     border-radius: 8px; /* Rounded corners */
     text-align: center; /* Center the text inside */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
 }
 
 .company-info h2 {
@@ -273,40 +279,33 @@ main h2 {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the section horizontally */
-    justify-content: center; /* Center the section vertically */
     text-align: center;
-    margin-top: 3rem;
-    width: 100%;
+    margin-top: 4rem;
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
+}
+
+/* Team Section Styling */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the section horizontally */
+    text-align: center;
+    margin-top: 4rem;
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
 }
 
 /* Team Grid */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased minimum size for images */
     gap: 2rem; /* Space between team members */
-    justify-items: center; /* Center the items inside each grid cell */
-    margin-top: 2rem;
-    width: 100%;
-    max-width: 1000px; /* Optional, to limit the width */
-    margin-left: auto; /* Center the grid horizontally */
-    margin-right: auto; /* Center the grid horizontally */
-}
-
-.team-grid figure {
-    width: 200px; /* Fixed width for the images */
+    justify-content: center; /* Center the grid items horizontally */
+    align-items: center; /* Center the items vertically */
+    max-width: 1200px; /* Limit the width of the grid container */
+    margin: 0 auto; /* Center the grid container itself */
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the items in the figure */
-}
-
-/* Team Images - Square and Centered */
-.team-grid img {
-    width: 100%; /* Make the image responsive */
-    height: 200px; /* Make the images square */
-    object-fit: cover; /* Ensure the images are cropped appropriately */
-    border-radius: 4px; /* Optional: round the corners of the image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 /* Captions under the image inside a box */
@@ -316,22 +315,63 @@ main h2 {
     font-weight: bold;
     color: var(--text-color); /* Use the text color */
     background-color: #f2f2f2; /* Background color for the box */
-    padding: 0.5rem; /* Padding inside the caption box */
+    padding: 1rem; /* Padding inside the caption box */
     width: 100%; /* Ensure it spans the full width of the figure */
+    height: auto; /* Allow height to be determined by content */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
     text-align: center;
     border-radius: 4px; /* Rounded corners for the caption box */
     border: 1px solid #ccc; /* Light border around the caption box */
+    word-wrap: break-word; /* Ensure the text wraps within the box */
+    white-space: normal; /* Allow the text to wrap */
+    box-sizing: border-box; /* Prevent padding from affecting width and height */
+    overflow: hidden; /* Hide any overflow if text or content exceeds the box size */
+}
+
+/* Team Image Box */
+.team-grid figure {
+    width: 100%; /* Full width of the container */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.team-grid img {
+    width: 100%; /* Make the image responsive */
+    height: 100%; /* Keep the image's aspect ratio */
+    max-height: 250px; /* Set a max height for images */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+    border-radius: 4px; /* Optional: round the corners of the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        padding: 1rem;
+    }
+
+    .team-grid figure {
+        max-width: 100%; /* Allow full-width figures on smaller screens */
+    }
 }
 
 /* Box Style for "Send Us a Message" Section */
 .contact-form {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 2rem auto; /* Center the form */
     padding: 2rem;
     background-color: #f9f9f9; /* Light background for the form */
     border: 1px solid #ccc; /* Add a border around the form */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
 }
 
 .contact-form h3 {
@@ -389,9 +429,17 @@ main h2 {
     background-color: #f4f4f4;
     padding: 2rem;
     text-align: center;
-    margin: 2rem 0;
+    margin: 2rem 0; /* Add spacing above and below */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
+}
+
+.newsletter .container {
+    max-width: 1200px; /* Match the header and hero section width */
+    margin: 0 auto; /* Center-align within the available space */
+    padding: 0 1rem; /* Add responsive padding for smaller screens */
 }
 
 .newsletter h2 {
@@ -446,6 +494,7 @@ main h2 {
 }
 
 /* Call to Action Section */
+
 .call-to-action {
     background-color: var(--secondary-color);
     color: #fff;
@@ -454,6 +503,14 @@ main h2 {
     margin: 2rem 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensures it spans full width */
+    box-sizing: border-box;
+}
+
+.call-to-action .container {
+    max-width: 1200px; /* Match the header and hero section width */
+    margin: 0 auto; /* Center-align within the available space */
+    padding: 0 1rem; /* Add responsive padding for smaller screens */
 }
 
 .call-to-action h2 {
@@ -486,9 +543,13 @@ main h2 {
 /* Content Grid Section */
 .content-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid layout */
     gap: 2rem;
     padding: 2rem 0;
+    justify-content: center; /* Center the grid items horizontally */
+    align-items: center; /* Center the grid items vertically (if required) */
+    max-width: 1200px; /* Limit the width of the grid container */
+    margin: 0 auto; /* Center the grid container itself */
     text-align: center;
 }
 
@@ -527,7 +588,8 @@ main h2 {
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
     .content-grid {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        padding: 1rem;
     }
 }
 
