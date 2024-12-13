@@ -73,18 +73,17 @@ section {
 }
 
 /* Hero Section */
-/* Hero Section */
 .hero {
     text-align: center;
     position: relative;
     height: 600px; /* Set the height of the hero image */
     margin-bottom: 1rem;
+    width: 100%; /* Ensure the hero section is full width */
 }
-
 
 .hero h1 {
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 0;
     width: 100%; /* Ensure it stretches across the entire width */
     transform: translateX(0); /* Remove the previous centering */
@@ -95,27 +94,27 @@ section {
     color: #fcfcfc;
 }
 
-
 .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* This ensures the image covers the area without distortion */
 }
 
-/* Banner Section */
+/* Banner Section - Ensuring the banner stays within the hero image */
 .banner {
     position: absolute;
-    bottom: 150px;
+    bottom: 200px; /* Adjust this value to place the banner closer to the bottom of the hero */
     left: 0;
-    right: 0;
+    right: 0; /* Make sure the banner stretches across the entire width of the hero */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 23, 31, 0.5); /* 50% opacity */
     padding: var(--padding);
-    margin-top: 1rem;
+    width: 100%; /* Ensure the banner width matches the hero image */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
-
+    
 
 .banner-text {
     color: #fcfcfc;
@@ -383,6 +382,266 @@ main h2 {
 .contact-form button:hover {
     background-color: var(--secondary-color);
 }
+
+/* Hero Page */
+/* Newsletter Signup Section */
+.newsletter {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.newsletter form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter label {
+    font-size: 1rem;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: center;
+    padding: 3rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.call-to-action h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.call-to-action p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #003459;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Content Grid Section */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.grid-item {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.grid-item h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+.grid-item p {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.grid-item:hover {
+    transform: translateY(-10px); /* Adds a slight hover effect */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+/* Trips */
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #007EA7;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    width: 100%; /* Ensures the background spans the full width */
+    box-sizing: border-box;
+}
+
+.cta-container {
+    max-width: 1200px; /* Matches the header width */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem; /* Optional, adds some padding on the sides */
+}
+
+  
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    background-color: #003459;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.cta-button:hover {
+    background-color: #007EA7;
+}
+
+/* Trip Descriptions Section */
+.trip-descriptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.trip-description {
+    text-align: center;
+}
+
+.trip-description img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trip-description h3 {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    color: #003459;
+}
+
+.trip-description p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Trip Table Section */
+.trip-table {
+    margin-top: 3rem;
+}
+
+.trip-table h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #003459;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.trip-table th, .trip-table td {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+}
+
+.trip-table th {
+    background-color: #003459;
+    color: white;
+}
+
+.trip-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.trip-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
 
 /* Footer */
 
