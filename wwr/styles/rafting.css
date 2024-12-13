@@ -457,6 +457,7 @@ main h2 {
 }
 
 .call-to-action h2 {
+    color: #ffff;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
@@ -551,6 +552,7 @@ main h2 {
 
   
 .cta-section h2 {
+    color: #ffff;
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
