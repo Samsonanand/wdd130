@@ -681,3 +681,13 @@ footer img {
     width: 20px;
     height: 20px;
 }
+
+footer a {
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Remove underline for a cleaner look */
+    font-weight: bold; /* Optional: Make the text bold */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Add underline on hover for better accessibility */
+}
